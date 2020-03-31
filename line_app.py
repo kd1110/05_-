@@ -136,7 +136,6 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     # 決定要回傳什麼 Component 到 Channel，這邊使用 TextSendMessage
-    init_fund_list()
     user_input = event.message.text
     if user_input == '基金列表':
         # 將 dict 儲存的基金列表組成回傳字串
