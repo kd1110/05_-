@@ -139,7 +139,7 @@ def handle_message(event):
     user_input = event.message.text
     if user_input == '基金列表':
         # 將 dict 儲存的基金列表組成回傳字串
-
+        init_fund_list()
         fund_list_str = ''
         for fund_name in fund_map_dict:
             fund_list_str += fund_name + '\n'
@@ -159,7 +159,7 @@ def handle_message(event):
                                    TextSendMessage(text='請輸入正確指令'))
 
 # 初始化清單
-init_fund_list()
+
 
 
 # __name__ 為內建變數，若程式不是被當作模組引入則為 __main__
