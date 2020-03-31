@@ -159,6 +159,9 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,
                                    TextSendMessage(text='請輸入正確指令'))
 
+# 初始化清單
+init_fund_list()
+
 
 # __name__ 為內建變數，若程式不是被當作模組引入則為 __main__
 if __name__ == "__main__":
